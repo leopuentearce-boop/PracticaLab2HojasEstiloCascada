@@ -1,0 +1,740 @@
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --sidebar-bg-1: #172d54;
+    --sidebar-bg-2: #102746;
+
+    --primary-purple: #6e45d8;
+    --primary-purple-dark: #5731bd;
+    --primary-purple-light: #7d55e8;
+
+    --white: #ffffff;
+
+    --text-dark: #161c2d;
+    --text-gray: #7a8190;
+
+    --border-color: #e4e7ed;
+
+    --background: #f6f7fa;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+}
+
+
+/* ========================================
+   DASHBOARD GENERAL
+======================================== */
+
+.dashboard {
+    display: flex;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    flex: 0 0 245px;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--sidebar-bg-1) 0%,
+            var(--sidebar-bg-2) 100%
+        );
+
+    color: var(--white);
+
+    padding: 28px 18px 20px;
+
+    position: relative;
+
+    box-shadow: 4px 0 18px rgba(15, 32, 60, 0.08);
+
+    z-index: 10;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 12px;
+
+    margin-bottom: 34px;
+}
+
+
+.sidebar-logo h1 {
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8d5cf6,
+            #4d35c5
+        );
+
+    color: var(--white);
+
+    font-size: 20px;
+
+    transform: rotate(-4deg);
+
+    box-shadow:
+        0 8px 20px rgba(101, 63, 224, 0.35);
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.logo-img img{
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+
+    object-fit: contain;
+    display: block;
+}
+
+/* ========================================
+   MENÚ DEL SIDEBAR
+======================================== */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.menu-link {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 52px;
+
+    padding: 0 17px;
+
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.menu-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    color: var(--white);
+
+    transform: translateX(3px);
+}
+
+
+.menu-link.active {
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            90deg,
+            #7550dd,
+            #5e3fc2
+        );
+
+    box-shadow:
+        0 6px 18px rgba(72, 39, 163, 0.32);
+}
+
+
+.menu-icon {
+    flex: 0 0 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+.menu-text {
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   USUARIO INFERIOR
+======================================== */
+
+.sidebar-user {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 16px 12px 0;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.user-avatar {
+    flex: 0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #d8dde5;
+
+    color: #718096;
+
+    font-size: 20px;
+}
+
+
+.user-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.user-info strong {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--white);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.user-info span {
+    font-size: 11px;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+.main-content {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    background: var(--background);
+}
+
+
+/* ========================================
+   HEADER / TOPBAR
+======================================== */
+
+.topbar {
+    flex: 0 0 85px;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 0 28px;
+
+    background: var(--white);
+
+    border-bottom:
+        1px solid var(--border-color);
+
+    box-shadow:
+        0 2px 8px rgba(20, 32, 55, 0.03);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* ========================================
+   PARTE IZQUIERDA DEL HEADER
+======================================== */
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    flex: 0 0 auto;
+}
+
+
+.topbar-left h2 {
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #151929;
+}
+
+
+/* ========================================
+   BOTÓN HAMBURGUESA
+======================================== */
+
+.hamburger-button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    color: #222b3c;
+
+    font-size: 21px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: background-color 0.25s ease;
+}
+
+
+.hamburger-button:hover {
+    background: #f1f2f6;
+}
+
+
+/* ========================================
+   PARTE DERECHA DEL HEADER
+======================================== */
+
+.topbar-right {
+    flex: 1 1 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   BUSCADOR
+======================================== */
+
+.search-box {
+    flex: 0 1 330px;
+
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dfe3ea;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.search-box:focus-within {
+    border-color: var(--primary-purple);
+
+    box-shadow:
+        0 0 0 3px rgba(110, 69, 216, 0.10);
+}
+
+
+.search-box input {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    color: var(--text-dark);
+
+    background: transparent;
+}
+
+
+.search-box input::placeholder {
+    color: #969cab;
+}
+
+
+.search-icon,
+.search-icon-right {
+    color: #596274;
+
+    font-size: 14px;
+}
+
+
+.search-icon-right {
+    margin-left: auto;
+}
+
+
+/* ========================================
+   NOTIFICACIONES
+======================================== */
+
+.notification-button {
+    flex: 0 0 42px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #222b3c;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition: background-color 0.25s ease;
+}
+
+
+.notification-button:hover {
+    background: #f2f3f7;
+}
+
+
+.notification-badge {
+    position: absolute;
+
+    top: 1px;
+    right: 0px;
+
+    min-width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5px;
+
+    border-radius: 20px;
+
+    background: #e32636;
+
+    color: var(--white);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    border: 2px solid var(--white);
+}
+
+
+/* ========================================
+   AVATAR DEL HEADER
+======================================== */
+
+.header-avatar {
+    flex: 0 0 42px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4953db,
+            #2636b8
+        );
+
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 13px rgba(42, 54, 180, 0.22);
+}
+
+
+/* ========================================
+   ÁREA CENTRAL VACÍA
+======================================== */
+
+.content-area {
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    padding: 25px;
+
+    background: #f7f8fb;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        flex-basis: 80px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .sidebar-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 12px;
+        margin-bottom: 34px;
+    }
+
+
+    .sidebar-logo h1,
+    .menu-text,
+    .user-info {
+        display: none;
+    }
+
+
+    .menu-link {
+        justify-content: center;
+
+        padding: 0;
+    }
+
+
+    .menu-icon {
+        flex-basis: auto;
+    }
+
+
+    .sidebar-user {
+        justify-content: center;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+
+/* ========================================
+   MÓVIL
+======================================== */
+
+@media (max-width: 650px) {
+
+    .dashboard {
+        min-width: 0;
+    }
+
+
+    .sidebar {
+        flex: 0 0 68px;
+    }
+
+
+    .topbar {
+        flex-basis: auto;
+
+        min-height: 74px;
+
+        padding: 12px 16px;
+
+        gap: 14px;
+    }
+
+
+    .topbar-left {
+        gap: 10px;
+    }
+
+
+    .topbar-left h2 {
+        font-size: 17px;
+    }
+
+
+    .topbar-right {
+        gap: 8px;
+    }
+
+
+    .search-box {
+        flex-basis: 45px;
+
+        width: 45px;
+
+        padding: 0;
+
+        justify-content: center;
+    }
+
+
+    .search-box input,
+    .search-icon-right {
+        display: none;
+    }
+
+
+    .header-avatar {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+    }
+
+
+    .notification-button {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+    }
+
+
+    .content-area {
+        padding: 15px;
+    }
+
+}

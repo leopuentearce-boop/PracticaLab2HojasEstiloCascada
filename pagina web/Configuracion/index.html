@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AnalyticsPro Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-img">
+                    <img src="imagenes/Logo.jpg" alt="Logo AnalyticsPro">
+                </div>
+
+                <h1>AnalyticsPro</h1>
+            </div>
+
+
+            <!-- Navegación -->
+            <nav class="sidebar-menu">
+
+                <a href="index.html" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    <span class="menu-text">Resumen</span>
+                </a>
+
+
+                <a href="Usuarios/index.html" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </span>
+
+                    <span class="menu-text">Usuarios</span>
+                </a>
+
+
+                <a href="Proyectos/index.html" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </span>
+
+                    <span class="menu-text">Proyectos</span>
+                </a>
+
+
+                <a href="Reportes/index.html" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </span>
+
+                    <span class="menu-text">Reportes</span>
+                </a>
+
+
+                <a href="Configuracion/index.html" class="menu-link active">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+
+                    <span class="menu-text">Configuración</span>
+                </a>
+
+
+                <a href="Ayuda/index.html" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+
+                    <span class="menu-text">Ayuda</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Usuario inferior -->
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="user-info">
+                    <strong>Leonardo Puente</strong>
+                    <span>Administrador</span>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             CONTENIDO PRINCIPAL
+        ========================== -->
+        <main class="main-content">
+
+            <!-- Header superior -->
+            <header class="topbar">
+
+                <!-- Parte izquierda -->
+                <div class="topbar-left">
+
+                    <button class="hamburger-button" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <h2>Resumen</h2>
+
+                </div>
+
+
+                <!-- Parte derecha -->
+                <div class="topbar-right">
+
+                    <!-- Buscador -->
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Buscar..."
+                            aria-label="Buscar"
+                        >
+
+                        <i class="fa-solid fa-magnifying-glass search-icon-right"></i>
+
+                    </div>
+
+
+                    <!-- Notificaciones -->
+                    <button class="notification-button" aria-label="Notificaciones">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="notification-badge">777</span>
+
+                    </button>
+
+
+                    <!-- Avatar -->
+                    <div class="header-avatar">
+                        LP
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="content-area">
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
